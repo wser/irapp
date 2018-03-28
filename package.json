@@ -7,8 +7,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "latest",
     "cross-env": "^5.1.4",
-    "nuxt": "latest",
-    "push-dir": "^0.4.1"
+    "nuxt": "latest"
   },
   "scripts": {
     "dev": "nuxt",
@@ -19,7 +18,7 @@
     "precommit": "npm run lint",
     "build:github": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:github": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=docs --branch=master --cleanup"
+    "deploy": "git push"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
