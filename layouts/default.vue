@@ -17,7 +17,12 @@
 <script>
 import Navbar from '@/components/Navbar'
 export default {
-  components: {Navbar}
+  components: {Navbar},
+  data(){
+    return {
+      fixed: false,
+    }
+  }
 }
 </script>
 
