@@ -1,29 +1,30 @@
 <template>
-<!--   <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+  <!--   
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
 
-				<div class="navbar-item indicator" :class="['network',online ? 'online' : 'offline']">
-					<div class="circle"></div>
-					{{ online ? '' : 'offline' }}
-				</div>
-        <nuxt-link class="navbar-item" @click="menuAction" to="#">{{pkg.name}}</nuxt-link>
+          <div class="navbar-item indicator" :class="['network',online ? 'online' : 'offline']">
+            <div class="circle"></div>
+            {{ online ? '' : 'offline' }}
+          </div>
+          <nuxt-link class="navbar-item" @click="menuAction" to="#">{{pkg.name}}</nuxt-link>
 
-        <button class="button navbar-burger" @click="menuAction">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="navbar-menu" :class="{'is-active': showNav}">
-        <div class="navbar-end" @click="menuAction">
-          <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
-          <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
+          <button class="button navbar-burger" @click="menuAction">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </div>
-    </nav>
-  </div> -->
-
+        <div class="navbar-menu" :class="{'is-active': showNav}">
+          <div class="navbar-end" @click="menuAction">
+            <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
+            <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
+          </div>
+        </div>
+      </nav>
+    </div>
+  -->
 
   <v-app>
     <v-navigation-drawer
