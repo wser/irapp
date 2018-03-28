@@ -1,13 +1,13 @@
 <template>
-  <section class="section is-medium">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        {{pkg.name}}
-      </h1>
-      <h2 class="subtitle">
-        {{pkg.description}}
-      </h2>
-    </div>
+  <section>
+
+    <h1 class="title">
+      {{pkg.name}}
+    </h1>
+    <h2 class="subtitle">
+      {{pkg.description}}
+    </h2>
+
   </section>
 </template>
 

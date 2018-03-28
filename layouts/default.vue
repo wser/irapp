@@ -1,8 +1,15 @@
 <template>
-  <div>
+  <v-app>
+    <main>
     <navbar></navbar>
-    <nuxt/>
-  </div>
+      <v-container fluid>
+        <nuxt />
+      </v-container>
+    </main>
+    <v-footer :fixed="fixed" app>
+      <span>&copy; 2017</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
