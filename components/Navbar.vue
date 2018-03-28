@@ -7,7 +7,7 @@
 					<div class="circle"></div>
 					{{ online ? '' : 'offline' }}
 				</div>
-        <nuxt-link class="navbar-item" @click="menuAction" to="/">{{pkg.name}}</nuxt-link>
+        <nuxt-link class="navbar-item" @click="menuAction" to="#">{{pkg.name}}</nuxt-link>
 
         <button class="button navbar-burger" @click="menuAction">
           <span></span>
@@ -59,10 +59,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	.indicator {margin:0; padding:0;left:.8rem;}
   .network { font-weight: 400; font-size: .8rem; }
   .network .circle { display: inline-block; width: .8rem; height: .8rem; background: green;
     padding: .05rem .25rem; border-radius: .5rem; }
   .network.offline .circle { background: red; }
+
+  .nuxt-link-exact-active {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
 </style>
