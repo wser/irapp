@@ -122,6 +122,11 @@ export default {
       menu: false
     }
 	},
+  computed: {
+    user () {
+      return this.$store.getters.activeUser
+    }
+  },
 	mounted () {
 		if (!window.navigator) {
 			this.online = false
@@ -137,7 +142,13 @@ export default {
 		},
 		menuAction(){
 			return this.showNav = !this.showNav
-		}
+    },
+    logout () {
+      this.$store.dispatch('signOut').then(() => {
+        alert('logged out!')
+        this.$router.push('/')
+      })
+    }
 	},
   destroyed () {
 		window.removeEventListener('offline', this._toggleNetworkStatus)
