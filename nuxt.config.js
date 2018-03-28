@@ -6,7 +6,9 @@ module.exports = {
   ** Build configuration
   */
   build: {},
-  generate:{ dir:'docs'},
+  generate: {dir: 'docs'},
+  router: { base: '/nuxtpwa/' },
+
   /*
   ** Headers
   ** Common headers are already provided by @nuxtjs/pwa preset
