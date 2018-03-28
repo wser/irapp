@@ -7,7 +7,7 @@
 					<div class="circle"></div>
 					{{ online ? '' : 'offline' }}
 				</div>
-        <a class="navbar-item" @click="menuAction" href="/">{{pkg.name}}</a>
+        <nuxt-link class="navbar-item" @click="menuAction" to="/">{{pkg.name}}</nuxt-link>
 
         <button class="button navbar-burger" @click="menuAction">
           <span></span>

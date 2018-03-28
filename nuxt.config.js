@@ -1,5 +1,9 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' 
+                 ? { router: { base: '/nuxtpwa/' }}
+                 : {}
+
 module.exports = {
   mode: 'spa',
   /*
@@ -7,7 +11,7 @@ module.exports = {
   */
   build: {},
   generate: {dir: 'docs'},
-  router: { base: '/nuxtpwa/' },
+  ...routerBase,
 
   /*
   ** Headers
