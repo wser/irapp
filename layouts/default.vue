@@ -1,14 +1,16 @@
 <template>
   <v-app>
-    <main>
+
     <navbar></navbar>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
-    </main>
+    
+    <v-container fluid>
+      <nuxt />
+    </v-container>
+
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
+    
   </v-app>
 </template>
 
