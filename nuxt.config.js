@@ -9,7 +9,22 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {},
+  build: {
+    extend (config, ctx) {
+      if (ctx.dev && ctx.isClient) {
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
+      }
+    },
+    extractCSS: true,
+    analyze: {
+      analyzerMode: 'static'
+    }
+  },
   generate: {dir: 'docs'},
   ...routerBase,
 
@@ -25,7 +40,8 @@ module.exports = {
     { hid: 'description', name: 'description', content: pkg.description }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
   ]
 },
   /*
@@ -38,6 +54,13 @@ module.exports = {
   manifest: {
     theme_color: '#3B8070'
   },
+  vuetify: {
+    // Vuetify options
+    //  theme: { }
+  },
+  router: {
+    middleware: 'router-auth'
+  },
   /*
   ** Modules
   */
@@ -45,9 +68,15 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/vuetify'
   ],
-
-  vuetify: {
-    // Vuetify options
-    //  theme: { }
-  }
+  plugins: [
+    '~/plugins/fireauth.js'
+  ],
+  css: [
+    { src: '~/assets/css/main.css', lang: 'css'},
+    { src: '~/assets/css/app.styl', lang: 'styl'}
+  ],
+  vendor: [
+    'firebase'
+  ],
+  
 }

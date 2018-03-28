@@ -20,7 +20,6 @@ export default {
 </script>
 
 <style>
-html
   html {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   }
