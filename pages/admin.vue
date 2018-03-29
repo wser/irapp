@@ -1,8 +1,5 @@
 <template>
   <section class="">
-    <h2 class="title">Admin Dashboard for Child Routes</h2>
-    <h5 class="subheading">The index page inside the admin folder</h5>
-
 		<h1 class="title">Admin Dashboard</h1>
     <h2 class="subheading">The routes below are are using <code>nuxt-child</code></h2>
     <v-flex xs12 id="adminNav">
@@ -12,7 +9,7 @@
     </v-flex>
     <v-divider></v-divider>
     <v-flex id="adminChild" xs12>
-      <nuxt-child :key="$router.fullPath"></nuxt-child>
+      <nuxt-child :key="$route.path"></nuxt-child>
     </v-flex>
   </section>
 </template>
@@ -23,13 +20,6 @@ export default {
 </script>
 
 <style>
-.avatar {
-  max-width: 100px;
-}
-.avatar img {
-  max-width: 100%;
-}
-
 #adminNav {
   display: flex;
   flex-flow: row wrap;
