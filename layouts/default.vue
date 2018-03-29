@@ -32,4 +32,7 @@ export default {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   }
 
+  main {
+    padding-top: 4.5em;
+  }
 </style>

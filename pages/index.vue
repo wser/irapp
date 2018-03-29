@@ -16,10 +16,12 @@
             <!-- <v-btn outline large flat nuxt @click="$router.push('/login')" primary>Sign In</v-btn> -->
           </div>
           <div v-else class="flexWrapper">
-            <h4 class="blue--text">You're logged in!</h4>
-            <v-btn icon class="blue white--text">
-              <v-icon>thumb_up</v-icon>
-            </v-btn>
+            <h4 class="blue--text">
+              You're logged in!
+              <v-btn icon class="blue white--text">
+                <v-icon>thumb_up</v-icon>
+              </v-btn>
+            </h4>
           </div>
         </div>
       </v-flex>
@@ -63,12 +65,7 @@
 </script>
 
 <style scoped>
-.fake {
-  background: blue;
-}
-.wrapper {
-  margin-top: -7.5em;
-}
+
 .flexWrapper {
   display: flex;
   justify-content: center;
