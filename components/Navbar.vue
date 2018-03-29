@@ -40,6 +40,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+          @click.native.stop="drawer = !drawer"
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -110,7 +111,7 @@ export default {
       pkg,
       showNav: false,
       
-      drawer: true,
+      drawer: false,
       fixed: false,
       items: [
         { icon: 'home', title: 'Welcome', to: '/' },

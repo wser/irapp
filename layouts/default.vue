@@ -1,12 +1,13 @@
 <template>
   <v-app>
 
-    <navbar></navbar>
+    <navbar app></navbar>
+    <main>
+      <v-container fluid>
+        <nuxt />
+      </v-container>
+    </main>
     
-    <v-container fluid>
-      <nuxt />
-    </v-container>
-
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
@@ -30,4 +31,5 @@ export default {
   html {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   }
+
 </style>

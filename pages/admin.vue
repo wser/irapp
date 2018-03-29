@@ -9,7 +9,7 @@
     </v-flex>
     <v-divider></v-divider>
     <v-flex id="adminChild" xs12>
-      <nuxt-child :key="$route.path"></nuxt-child>
+      <nuxt-child :key="$router.fullPath"></nuxt-child>
     </v-flex>
   </section>
 </template>
