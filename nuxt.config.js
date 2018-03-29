@@ -1,8 +1,8 @@
 const pkg = require('./package')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' 
-                 ? { router: { base: '/nuxtpwa/' }}
-                 : {}
+                 ? { router: { base: '/nuxtpwa/', middleware: 'router-auth' } }
+                 : { router: { middleware: 'router-auth' } }
 
 module.exports = {
   mode: 'spa',
@@ -57,10 +57,7 @@ module.exports = {
   vuetify: {
     // Vuetify options
     //  theme: { }
-  },
-  router: {
-    middleware: 'router-auth'
-  },
+  },  
   /*
   ** Modules
   */
