@@ -1,7 +1,7 @@
 {
-  "name": "nuxtpwa",
+  "name": "irapp",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "Best tool one auditor can use",
   "author": "wser <w.web.dev@gmail.com>",
   "private": true,
   "dependencies": {

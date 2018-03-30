@@ -1,11 +1,11 @@
 <template>
-  <h2>Please select an user.</h2>
+  <h2>Please select an player.</h2>
 </template>
 
 <script>
 export default {
   head: {
-    title: 'Please select an user'
+    title: 'Welcome'
   }
 }
 </script>

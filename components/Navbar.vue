@@ -92,7 +92,7 @@ export default {
         { icon: 'person', title: 'Admin', to: '/admin' },
         // { icon: 'store', title: 'FireStore', to: '/firestore' }
       ],
-      title: 'Nuxt Firebase Auth',
+      title: 'irapp.ga - global access',
       menu: false
     }
 	},

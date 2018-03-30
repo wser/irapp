@@ -2,10 +2,10 @@
   <section>
 
     <h1 class="title">
-      {{pkg.name}}
+      irapp.ga
     </h1>
     <h2 class="subtitle">
-      {{pkg.description}}
+      Best tool one auditor can use
     </h2>
 
     <v-layout >
