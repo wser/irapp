@@ -1,7 +1,6 @@
-<template>
-  <v-container>
-    <login-form></login-form>
-  </v-container>
+<template lang="pug">
+  v-container
+    login-form
 </template>
 
 <script>

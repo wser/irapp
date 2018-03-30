@@ -1,5 +1,5 @@
-<template>
-  <h2>Please select an player.</h2>
+<template lang="pug">
+  h2 Please select an player.
 </template>
 
 <script>

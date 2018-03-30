@@ -1,8 +1,7 @@
-<template>
-  <div class="player">
-    <h1>#{{ number }}</h1>
-    <h2>{{ name }}</h2>
-  </div>
+<template lang="pug">
+.player
+  h1 \#{{ number }}
+  h2 {{ name }}
 </template>
 
 <script>
