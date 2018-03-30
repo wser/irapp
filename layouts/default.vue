@@ -9,7 +9,10 @@
     </main>
     
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
+      <span>&copy; 2018</span>&nbsp;
+      <small>
+        <a href="http://vidakovic.info">vidakovic.info</a>
+      </small>
     </v-footer>
     
   </v-app>
