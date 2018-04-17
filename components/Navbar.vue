@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <div>
     <v-navigation-drawer
       persistent
       app
@@ -72,7 +72,7 @@
       </div>
 
     </v-toolbar>
-  </v-row>
+  </div>
 </template>
 
 <script>
