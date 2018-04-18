@@ -1,21 +1,14 @@
-<template>
-  <v-app>
+<template lang="pug">
+v-app
+  navbar(app='')
+  main
+    v-container(fluid='')
+      nuxt
+  v-footer(:fixed='fixed' app='')
+    span &copy; 2018
+    small
+      a(href='http://vidakovic.info') vidakovic.info
 
-    <navbar app></navbar>
-    <main>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
-    </main>
-    
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2018</span>&nbsp;
-      <small>
-        <a href="http://vidakovic.info">vidakovic.info</a>
-      </small>
-    </v-footer>
-    
-  </v-app>
 </template>
 
 <script>

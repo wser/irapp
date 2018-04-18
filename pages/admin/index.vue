@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <section class="">
     <h2 class="title">Admin Dashboard for Child Routes</h2>
@@ -8,6 +9,13 @@
     <v-btn @click="onSave">save</v-btn>
     <v-btn @click="onReturn">return</v-btn>
   </section>
+=======
+<template lang="pug">
+section
+  h2.title Admin Dashboard for Child Routes
+  h5.subheading The index page inside the admin folder
+
+>>>>>>> 4a252bd7487cd3a90e820125681936db8fc64f15
 </template>
 
 <script>

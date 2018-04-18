@@ -1,50 +1,28 @@
-<template>
-  <section>
-
-    <h1 class="title">
-      irapp.ga
-    </h1>
-    <h2 class="subtitle">
-      Best tool one auditor can use
-    </h2>
-
-    <v-layout >
-      <v-flex xs12 md8 offset-md2>
-        <div class="wrapper">
-          <div v-if="!$store.state.user">
-            <login-form></login-form>
-            <!-- <v-btn outline large flat nuxt @click="$router.push('/login')" primary>Sign In</v-btn> -->
-          </div>
-          <div v-else class="flexWrapper">
-            <h4 class="blue--text">
-              You're logged in!
-              <v-btn icon class="blue white--text">
-                <v-icon>thumb_up</v-icon>
-              </v-btn>
-            </h4>
-          </div>
-        </div>
-      </v-flex>
-    </v-layout>
-
-
-
-    <v-card class="container">
-      <div class="left">
-        <h2><nuxt-link to="/">Players</nuxt-link></h2>
-        <ul class="players">
-          <li v-for="user in users" :key="user.id">
-            <nuxt-link :to="'/'+user.id">{{ user.name }}</nuxt-link>
-          </li>
-        </ul>
-      </div>
-      <div class="right">
-        <nuxt-child :key="$route.params.id"/>
-      </div>
-    </v-card>
-
-
-  </section>
+<template lang="pug">
+section
+  h1.title
+    | irapp.ga
+  h2.subtitle
+    | Best tool one auditor can use
+  v-layout
+    v-flex(xs12='' md8='' offset-md2='')
+      .wrapper
+        div(v-if='!$store.state.user')
+          login-form
+        .flexWrapper(v-else='')
+          h4.blue--text
+            | You're logged in!
+            v-btn.blue.white--text(icon='')
+              v-icon thumb_up
+  v-card.container
+    .left
+      h2
+        nuxt-link(to='/') Players
+      ul.players
+        li(v-for='user in users' :key='user.id')
+          nuxt-link(:to="'/'+user.id") {{ user.name }}
+    .right
+      nuxt-child(:key='$route.params.id')
 </template>
 
 <script>

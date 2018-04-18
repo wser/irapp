@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div>
     <v-navigation-drawer
@@ -73,6 +74,43 @@
 
     </v-toolbar>
   </div>
+=======
+<template lang="pug">
+v-row
+  v-navigation-drawer(persistent='' app='' enableresizewatcher='' v-model='drawer')
+    v-list
+      v-list-tile(router='' nuxt='' exact='' v-for='(item, i) in items' :key='i' :to='item.to' @click.native.stop='drawer = !drawer')
+        v-list-tile-action
+          v-icon(v-html='item.icon')
+        v-list-tile-content
+          v-list-tile-title(v-text='item.title')
+  v-toolbar(app='' fixed='')
+    v-btn(icon='' @click.native.stop='drawer = !drawer')
+      v-icon menu
+    .navbar-item.indicator(:class="['network',online ? 'online' : 'offline']")
+      .circle
+      |         {{ online ? &apos;&apos; : &apos;offline&apos; }}
+    v-toolbar-title(v-text='title')
+    v-spacer
+    #user.text-xs-center(v-if='user')
+      v-menu(offset-x='' :close-on-content-click='false' :nudge-top='200' v-model='menu')
+        v-btn(icon='' slot='activator')
+          v-icon(medium='') settings
+        v-card
+          v-list
+            v-list-tile(avatar='')
+              v-list-tile-avatar
+                img(:src='$store.state.user.photoURL' alt='')
+              v-list-tile-content
+                v-list-tile-title(v-if='user.displayName') {{user.displayName}}
+            v-divider
+            v-list-tile
+              v-spacer
+              v-list-tile-action
+                v-btn.mt-2(primary='' color='primary' @click.native='logout')
+                  | Logout
+
+>>>>>>> 4a252bd7487cd3a90e820125681936db8fc64f15
 </template>
 
 <script>

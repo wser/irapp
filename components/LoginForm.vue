@@ -1,42 +1,16 @@
-<template>
-  <v-layout>
-    <v-flex text-xs-center xs12 sm6 offset-sm3>
-      <h2 class="title">Sign In with Google</h2>
-     <v-btn class="signIn mb-2" primary @click.native="googleSignUp">Google Sign In</v-btn>
-     <br>
-
-      <h2 class="title">Sign In with Email</h2>
-    <v-form v-model="valid" ref="form" lazy-validation>
-      <v-text-field
-        label="E-mail"
-        v-model="formEmail"
-        :rules="emailRules"
-        required
-      ></v-text-field>
-
-      <v-text-field
-          name="input-pass"
-          label="Enter your password"
-          v-model="formPassword"
-          counter
-          required
-        ></v-text-field>
-      
-      
-      <v-btn
-        @click="emailLogin"
-        :disabled="!valid"
-      >
-        submit
-      </v-btn>
-
-      <v-btn @click="clear">clear</v-btn>
-    </v-form>
-
-
-
-    </v-flex>
-  </v-layout>
+<template lang="pug">
+v-layout
+  v-flex(text-xs-center='' xs12='' sm6='' offset-sm3='')
+    h2.title Sign In with Google
+    v-btn.signIn.mb-2(primary='' @click.native='googleSignUp') Google Sign In
+    br
+    h2.title Sign In with Email
+    v-form(v-model='valid' ref='form' lazy-validation='')
+      v-text-field(label='E-mail' v-model='formEmail' :rules='emailRules' required='')
+      v-text-field(name='input-pass' label='Enter your password' v-model='formPassword' counter='' required='')
+      v-btn(@click='emailLogin' :disabled='!valid')
+        | submit
+      v-btn(@click='clear') clear
 
 </template>
 
