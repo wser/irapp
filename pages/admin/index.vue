@@ -13,24 +13,35 @@
 <script>
 import { config } from '~/static/tinymce.config.js'
 import { parse, parseDefaults, stringify } from 'himalaya'
+const passKey= 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc'
+var encryptor = require('simple-encryptor')(passKey)
+
+
 export default {
   data() {
     return {
       data : 'Hi there from TinyMCE for Vue.js.',
       undata:'',
-      config: config      
+      config: config,
     }
   },
   methods: {
     onSave(){
-      this.undata = parse(this.data, {...parseDefaults, includePositions: true})
+      //generate json from html with himalaya
+      let json = parse(this.data, {...parseDefaults, includePositions: true})
+      //encription     
+      let encr = encryptor.encrypt(json)
+      this.undata = encr
       this.data = ''
-      //console.log(this.undata)
+      // console.log(this.undata)
 
     },
     onReturn(){
-      this.data = stringify(this.undata)
-      //console.log(stringify(this.undata))
+      //let decr = encryptor.hmac(this.undata)
+      //console.log(decr)
+      let decr = encryptor.decrypt(this.undata);
+      this.data = stringify(decr)
+      
     }
     /* handleInit (editor) {
       console.log(editor)
@@ -75,10 +86,14 @@ export default {
   height: 60vh;
 }
 
-.mce-label.mce-charactercount{
+/* .mce-label.mce-charactercount{
   margin: 2px 0 2px 2px;
   padding: 8px;
   font-size: 12px;
 }
+
+.mce-path {
+  display: none !important;
+} */
 
 </style>

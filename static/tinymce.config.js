@@ -1,5 +1,3 @@
-import {chrcount} from './tinymce-charactercount.plugin.js'
-
 export const config = {
 	branding: false, // To disable "Powered by TinyMCE"
 	theme: "modern",
@@ -8,8 +6,7 @@ export const config = {
 	elementpath: false, // To remove path in status bar in TinyMCE4
 	resize: 'both',
 	
-	plugins: `print preview searchreplace autolink directionality visualblocks chrcount 
-	visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools  contextmenu colorpicker textpattern help`,
+	plugins: `print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools  contextmenu colorpicker textpattern help`,
 	// menubar: 'file edit insert view format table tools help',
 
 	toolbar1: `undo redo | formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | image table fullscreen | removeformat`,

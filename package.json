@@ -11,6 +11,7 @@
     "firebase": "^4.12.0",
     "himalaya": "^1.1.0",
     "nuxt": "latest",
+    "simple-encryptor": "^1.2.0",
     "vue-mce": "^1.5.0"
   },
   "scripts": {
