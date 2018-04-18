@@ -4,7 +4,7 @@
  * trailing and leading whitespaces from count.
  */
 
-export const charactercount = () => {tinymce.PluginManager.add('charactercount', function (editor) {
+export const chrcount = () => {tinymce.PluginManager.add('charactercount', function (editor) {
   var _self = this;
 
   function update() {

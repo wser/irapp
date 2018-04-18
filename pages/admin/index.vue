@@ -6,21 +6,31 @@
       <vue-mce v-model="data" :config="config"></vue-mce>	
     </div>
     <v-btn @click="onSave">save</v-btn>
+    <v-btn @click="onReturn">return</v-btn>
   </section>
 </template>
 
 <script>
 import { config } from '~/static/tinymce.config.js'
+import { parse, parseDefaults, stringify } from 'himalaya'
 export default {
   data() {
     return {
       data : 'Hi there from TinyMCE for Vue.js.',
+      undata:'',
       config: config      
     }
   },
   methods: {
     onSave(){
-      console.log(this.data)
+      this.undata = parse(this.data, {...parseDefaults, includePositions: true})
+      this.data = ''
+      //console.log(this.undata)
+
+    },
+    onReturn(){
+      this.data = stringify(this.undata)
+      //console.log(stringify(this.undata))
     }
     /* handleInit (editor) {
       console.log(editor)
