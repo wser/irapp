@@ -91,6 +91,7 @@ module.exports = {
     { src: '~/assets/css/app.styl', lang: 'styl'}
   ],
   env: {
+    cypherKey: 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc',
     users: [
       { id: 1, name: 'Kobe Bryant', number: 24 },
       { id: 2, name: 'Michael Jordan', number: 23 },

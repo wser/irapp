@@ -13,8 +13,8 @@
 <script>
 import { config } from '~/static/tinymce.config.js'
 import { parse, parseDefaults, stringify } from 'himalaya'
-const passKey= 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc'
-var encryptor = require('simple-encryptor')(passKey)
+
+var encryptor = require('simple-encryptor')(process.env.cypherKey)
 
 
 export default {
@@ -39,8 +39,14 @@ export default {
     onReturn(){
       //let decr = encryptor.hmac(this.undata)
       //console.log(decr)
-      let decr = encryptor.decrypt(this.undata);
-      this.data = stringify(decr)
+      try {
+        let decr = encryptor.decrypt(this.undata);
+        this.data = stringify(decr)
+      }
+      catch (e) {
+        this.data= ''
+        console.log(e)
+      }
       
     }
     /* handleInit (editor) {
