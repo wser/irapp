@@ -18,6 +18,9 @@ var encryptor = require('simple-encryptor')(process.env.cypherKey)
 
 
 export default {
+  head: {
+    title:'Dashboard'
+  },
   data() {
     return {
       data : 'Hi there from TinyMCE for Vue.js.',

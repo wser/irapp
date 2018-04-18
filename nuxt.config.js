@@ -25,21 +25,10 @@ module.exports = {
       analyzerMode: 'static'
     },
     vendor: [
-      'firebase',
-      'vue-mce'
+      'firebase'
     ]
   },
-  generate: {
-    dir: 'docs',
-    routes: [
-      '/1',
-      '/2',
-      '/3',
-      '/4',
-      '/5',
-      '/6'
-    ]
-  },
+
   ...routerBase,
 
   /*
@@ -90,6 +79,17 @@ module.exports = {
     { src: '~/assets/css/main.css', lang: 'css'},
     { src: '~/assets/css/app.styl', lang: 'styl'}
   ],
+  generate: {
+    dir: 'docs',
+    routes: [
+      '/1',
+      '/2',
+      '/3',
+      '/4',
+      '/5',
+      '/6'
+    ]
+  },
   env: {
     cypherKey: 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc',
     users: [
