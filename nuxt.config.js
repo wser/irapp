@@ -45,9 +45,6 @@ module.exports = {
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
-  ],
-  script: [
-    { src: 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.11/tinymce.min.js' }
   ]
 },
   /*
@@ -73,7 +70,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/fireauth.js',
-    '~/plugins/vuemce.js'
+    '~/plugins/tinymce.js',
   ],
   css: [
     { src: '~/assets/css/main.css', lang: 'css'},

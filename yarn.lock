@@ -156,6 +156,12 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@tinymce/tinymce-vue@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-vue/-/tinymce-vue-1.0.6.tgz#903e5c82242201b1d84ca564ebc2c25ba6a2f3f3"
+  dependencies:
+    vue "^2.5.13"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.1.tgz#1405e5396968c4302994b0161ce405b72b874257"
@@ -6675,10 +6681,6 @@ vue-loader@13.7.0:
     vue-hot-reload-api "^2.2.0"
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
-
-vue-mce@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/vue-mce/-/vue-mce-1.5.0.tgz#ff029253ad8c5e9872264b25720d5be2b01f04e8"
 
 vue-meta@^1.4.3:
   version "1.5.0"

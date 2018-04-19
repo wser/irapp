@@ -7,7 +7,16 @@ export const config = {
 	resize: 'both',
 	
 	plugins: `print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help`,
-	// menubar: 'file edit insert view format table tools help',
+	menubar: 'file edit insert view format table tools help',
+	menu: {
+    file: {title: 'File', items: 'newdocument'},
+    edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+    insert: {title: 'Insert', items: 'link media | template hr'},
+    view: {title: 'View', items: 'visualaid'},
+    format: {title: 'Format', items: 'bold italic underline strikethrough superscript subscript | formats | removeformat'},
+    table: {title: 'Table', items: 'inserttable tableprops deletetable | cell row column'},
+    tools: {title: 'Tools', items: 'spellchecker code'}
+  },
 
 	toolbar1: `undo redo | formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | image table fullscreen | removeformat`,
 	

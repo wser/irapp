@@ -3,7 +3,10 @@ section
   h2.title Admin Dashboard for Child Routes
   h5.subheading The index page inside the admin folder
   .mce
-    vue-mce(v-model="data" :config="config")
+    editor(
+      v-model="data",
+      :init="config",
+      api-key="95dgxvahar1yg60ocppap84kjzjxbstzk12yjbggcac593p5")
   v-btn(@click="onSave") save
   v-btn(@click="onReturn") return
 </template>

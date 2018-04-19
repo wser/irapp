@@ -48,7 +48,7 @@ export default {
       items: [
         { icon: 'home', title: 'Welcome', to: '/' },
         { icon: 'info', title: 'About', to: '/about' },
-        { icon: 'person', title: 'Admin', to: '/admin' },
+        { icon: 'dashboard', title: 'Dashboard', to: '/admin' },
         // { icon: 'store', title: 'FireStore', to: '/firestore' }
       ],
       title: 'irapp.ga - global access',
