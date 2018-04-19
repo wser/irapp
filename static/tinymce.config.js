@@ -5,6 +5,7 @@ export const config = {
 	width : "100%",
 	elementpath: false, // To remove path in status bar in TinyMCE4
 	resize: 'both',
+	language_url: './langs/hr.js',
 	
 	plugins: `print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help emoticons`,
 	//menubar: 'file edit insert view format table tools help',

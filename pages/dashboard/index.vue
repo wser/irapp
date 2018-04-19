@@ -1,6 +1,6 @@
 <template lang="pug">
 section
-  h2.title Admin Dashboard for Child Routes
+  h2.title User's Dashboard for Child Routes
   h5.subheading The index page inside the admin folder
   .mce
     editor(
