@@ -3,7 +3,7 @@ section
   h2.title User's Dashboard for Child Routes
   h5.subheading The index page inside the admin folder
   .mce
-    editor(
+    teditor(
       v-model="data",
       :init="config",
       api-key="95dgxvahar1yg60ocppap84kjzjxbstzk12yjbggcac593p5")
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      data : 'Hi there from TinyMCE for Vue.js.',
+      data : 'P0zdrav zemljani iz zraka',
       undata:'',
       config: config,
     }
