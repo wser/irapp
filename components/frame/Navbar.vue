@@ -19,7 +19,8 @@ export default {
     return {      
       items: [
         { icon: 'home', title: 'Welcome', to: '/' },
-        { icon: 'info', title: 'About', to: '/about' },
+        { icon: 'date_range', title: 'Planiranje', to: '/planiranje' },
+        { icon: 'description', title: 'Obrasci', to: '/obrasci' },
         { icon: 'dashboard', title: 'Dashboard', to: '/dashboard' },
         // { icon: 'store', title: 'FireStore', to: '/firestore' }
       ],

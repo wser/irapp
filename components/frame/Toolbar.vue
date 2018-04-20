@@ -9,7 +9,7 @@
     v-toolbar-title {{title}}
     v-spacer
     #user.text-xs-center(v-if='user')
-      v-menu(offset-x, :close-on-content-click='false', :nudge-top='200', v-model='menu')
+      v-menu(offset-x, :close-on-content-click='false', :nudge-top='200')
         v-btn(icon, slot='activator')
           v-icon(medium) settings
         v-card
