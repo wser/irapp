@@ -5,7 +5,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       user: null,
-      drawer: true,
+      drawer: false,
       drawerRight: false,
       page:'',
     },

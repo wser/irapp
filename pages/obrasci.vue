@@ -9,9 +9,8 @@ v-container
             v-card-text
               ION
               v-btn potvrdi
-              v-tooltip(v-model='showTooltip' top)
-                v-spacer
-                v-btn(icon, slot='activator', @click.native="showTooltip = !showTooltip")
+              v-tooltip(top)
+                v-btn(icon, slot='activator')
                   v-icon(color='grey lighten-1') info
                 span Programmatic tooltip
         v-expansion-panel-content
