@@ -34,11 +34,8 @@ export default {
   data:() => ({
     fixed: false,
     showNav: false,
-    drawer: false,
     online: true,
     title: 'irapp.ga - global access',
-
-    drawerRight: true,
     right: null,
   }),
   computed: {

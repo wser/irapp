@@ -12,9 +12,6 @@ const createStore = () => {
     getters: {
       activeUser: (state, getters) => {
         return state.user
-      },
-      getUser: state => {
-        return state.user;
       }
     },
     mutations: {

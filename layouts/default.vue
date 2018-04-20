@@ -34,6 +34,6 @@ export default {
   #content{
     width: 95vw;
     margin-top: 4em;
-    margin-bottom:50px;
+    margin-bottom: 3em;
   }
 </style>
