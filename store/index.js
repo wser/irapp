@@ -4,11 +4,17 @@ import firebase, {auth, GoogleProvider, EmailAuth} from '@/services/fireinit.js'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      user: null
+      user: null,
+      drawer: true,
+      drawerRight: false,
+      page:'',
     },
     getters: {
       activeUser: (state, getters) => {
         return state.user
+      },
+      getUser: state => {
+        return state.user;
       }
     },
     mutations: {

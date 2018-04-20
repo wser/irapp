@@ -1,15 +1,26 @@
 export const config = {
 	branding: false, // To disable "Powered by TinyMCE"
 	theme: "modern",
-	height: "60vh",
+	height: "50vh",
 	width : "100%",
 	elementpath: false, // To remove path in status bar in TinyMCE4
 	resize: 'both',
+	language_url: './langs/hr.js',
 	
-	plugins: `print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help`,
-	// menubar: 'file edit insert view format table tools help',
+	plugins: `print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help emoticons`,
+	//menubar: 'file edit insert view format table tools help',
+	menu: {
+    file: {title: 'File', items: 'preview print'},
+    edit: {title: 'Edit', items: 'undo redo | cut copy paste | selectall | searchreplace'},
+    insert: {title: 'Insert', items: 'image link media template table| charmap hr | anchor toc | insertdatetime'},
+    view: {title: 'View', items: 'visualaid visualchars visualblocks | preview fullscreen'},
+    format: {title: 'Format', items: 'bold italic underline strikethrough superscript subscript | align | removeformat'},
+    table: {title: 'Table', items: 'inserttable tableprops deletetable | cell row column'},
+		tools: {title: 'Tools', items: 'spellchecker code'},
+		help: {title: 'Help', items: 'help'}
+  },
 
-	toolbar1: `undo redo | formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | image table fullscreen | removeformat`,
+	toolbar1: `undo redo | formatselect fontsizeselect | bold italic strikethrough forecolor backcolor | link emoticons | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | image table fullscreen | removeformat`,
 	
 	fontsize_formats: "8px 10px 12px 14px 16px 18px 20px 22px 24px 26px 39px 34px 38px 42px 48px",
 	

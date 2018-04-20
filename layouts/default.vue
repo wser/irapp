@@ -1,20 +1,23 @@
 <template lang="pug">
-v-app
-  navbar(app='')
+v-app(id='app')
+  toolbar
+  navbar
+  right-drawer
   main
-    v-container(fluid='')
-      nuxt
-  v-footer(:fixed='fixed' app='')
-    span &copy; 2018
-    small
-      a(href='http://vidakovic.info') vidakovic.info
+    v-container(fluid)
+      nuxt(id="content")
+  lowbar
 
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
+import Navbar from "@/components/frame/Navbar.vue"
+import Toolbar from "@/components/frame/Toolbar.vue"
+import Lowbar from "@/components/frame/Lowbar.vue"
+import RightDrawer from "@/components/frame/RightDrawer.vue"
+
 export default {
-  components: {Navbar},
+  components: {Navbar, Toolbar, Lowbar, RightDrawer},
   data(){
     return {
       fixed: false,
@@ -28,7 +31,9 @@ export default {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   }
 
-  main {
-    padding-top: 4.5em;
+  #content{
+    width: 95vw;
+    margin-top: 4em;
+    margin-bottom:50px;
   }
 </style>
