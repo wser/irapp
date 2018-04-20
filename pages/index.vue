@@ -12,8 +12,9 @@ section
         .flexWrapper(v-else='')
           h4.blue--text
             | You're logged in!
-            v-btn.blue.white--text(icon='')
+            v-btn.blue.white--text(icon, @click="onClick")
               v-icon thumb_up
+            span(v-if="counter>0") {{counter}}
   v-card.container
     .left
       h2
@@ -33,11 +34,17 @@ section
     asyncData({ env }) {
       return { 
         users: env.users,
-        pkg
+        pkg,
+        counter: 0
       }
     },
     components: {
       LoginForm
+    },
+    methods: {
+      onClick() {
+        this.counter += 1
+      }
     }
   }
 </script>

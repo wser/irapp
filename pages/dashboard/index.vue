@@ -2,13 +2,13 @@
 section
   h2.title User's Dashboard for Child Routes
   h5.subheading The index page inside the admin folder
+  v-btn(@click="onSave") save
+  v-btn(@click="onReturn") return
   .mce
     teditor(
       v-model="data",
       :init="config",
       api-key="95dgxvahar1yg60ocppap84kjzjxbstzk12yjbggcac593p5")
-  v-btn(@click="onSave") save
-  v-btn(@click="onReturn") return
 </template>
 
 <script>
@@ -53,34 +53,6 @@ export default {
       }
       
     }
-    /* handleInit (editor) {
-      console.log(editor)
-      // This handler fires when tinymce editor is successfully initialized.
-      //   Receives tinymce editor instance as argument
-      
-      //   You can save the editor instance to variable and
-      //   call editor.setContent(yourContent) any time you want
-    }, */
-    
-    /* handleError (err) {
-      console.log(err)
-      // Fires when an error occurred. Receives error object 
-    }, */
-    
-    /* handleInput (value) {
-      console.log(value)
-      // Fires whenever editor content changes. Receives generated HTML
-    }, */
-    
-    /* handleChange (value) {
-      console.log(value)
-      // Fires only when editor emits focusout event. Receives generated HTML
-    }, */
-    
-    /* handleDestroy (editor) {
-      console.log(editor)
-      // Fires before VueMce component destroys. Receives tinymce editor instance 
-    }, */
   }
 }
 </script>
