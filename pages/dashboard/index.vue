@@ -15,7 +15,7 @@ section
 import { config } from '~/static/tinymce.config.js'
 import { parse, parseDefaults, stringify } from 'himalaya'
 
-var encryptor = require('simple-encryptor')(env.cypherKey)
+var encryptor = require('simple-encryptor')(process.env.cypherKey)
 
 
 export default {

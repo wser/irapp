@@ -76,6 +76,6 @@ module.exports = {
     dir: 'docs',
   },
   env: {
-    cypherKey: 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc',
+    cypherKey: 'RzwVHm6nG^v#uKV?h+MRhh?Ca57BAmEkG9cb?JkUb!aPWDMF4e&JvxSAm+5-9yrc'
   },
 }
