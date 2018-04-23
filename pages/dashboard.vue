@@ -1,21 +1,15 @@
 <template lang="pug">
 section
   v-tabs(fixed-tabs='' v-model='currentItem' color='transparent' slider-color='yellow' slot='extension')
-    v-tab(v-for='item in items' :key='item' :href="'#tab-' + item")
-      | {{ item }}
-    v-menu.tabs__div(left='' bottom='' v-if='more.length')
-      a.tabs__item(slot='activator')
-        | more
-        v-icon arrow_drop_down
-      v-list.grey.lighten-3
-        v-list-tile(v-for='item in more' :key='item' @click='addItem(item)')
-          | {{ item }}
+    v-tab(v-for='(item, i) in itemz' :key='i' :href="'#tab-' + i" router)
+      nuxt-link(:to='item.to') {{ item.title }}
+    
   v-tabs-items(v-model='currentItem')
-    v-tab-item(v-for='item in items.concat(more)' :key='item' :id="'tab-' + item")
+    v-tab-item(v-for='(item, i) in itemz' :key='i' :id="'tab-' + i")
       v-card(flat='')
         v-card-text
-          h2 {{ item }}
-          | {{ text }}
+          v-flex
+            nuxt-child(:key='$router.fullPath')
 
 
 
@@ -23,7 +17,7 @@ section
 
 
 
-
+//
   v-flex#adminNav(xs12='')
     nuxt-link.adminNavRoute(v-for='(item, i) in itemz' :key='i' :to='item.to') 
       v-icon(v-html='item.icon')
@@ -49,7 +43,7 @@ export default {
 
 
 
-    currentItem: 'tab-Web',
+    currentItem: 'tab-Početna',
     items: [
       'Web', 'Shopping', 'Videos', 'Images'
     ],
@@ -59,14 +53,7 @@ export default {
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
   }),
   methods: {
-    addItem (item) {
-      const removed = this.items.splice(0, 1)
-      this.items.push(
-        ...this.more.splice(this.more.indexOf(item), 1)
-      )
-      this.more.push(...removed)
-      this.$nextTick(() => { this.currentItem = 'tab-' + item })
-    }
+
   }
 }
 </script>
@@ -86,14 +73,4 @@ export default {
   margin-top: 1em;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: opacity .4s, transform .4s;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  opacity: 1;
-}
-.page-enter, .page-leave-active {
-  opacity: 0.5;
-  transform: rotateY(100deg);
-}
 </style>
