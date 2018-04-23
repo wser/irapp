@@ -6,18 +6,16 @@ v-app(id='app')
   main
     v-container(fluid)
       nuxt(id="content")
-  lowbar
 
 </template>
 
 <script>
 import Navbar from "@/components/frame/Navbar.vue"
 import Toolbar from "@/components/frame/Toolbar.vue"
-import Lowbar from "@/components/frame/Lowbar.vue"
 import RightDrawer from "@/components/frame/RightDrawer.vue"
 
 export default {
-  components: {Navbar, Toolbar, Lowbar, RightDrawer},
+  components: {Navbar, Toolbar, RightDrawer},
   data(){
     return {
       fixed: false,

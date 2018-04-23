@@ -5,9 +5,10 @@ section
     | The routes below are are using 
     code nuxt-child
   v-flex#adminNav(xs12='')
-    nuxt-link.adminNavRoute(to='/dashboard') Dashboard Home
-    nuxt-link.adminNavRoute(to='/dashboard/settings') Settings
-    nuxt-link.adminNavRoute(to='/dashboard/items') Database Example
+    nuxt-link.adminNavRoute(v-for='(item, i) in items' :key='i' :to='item.to') 
+      v-icon(v-html='item.icon')
+      | {{item.title}}
+
   v-divider
   v-flex#adminChild(xs12='')
     nuxt-child(:key='$router.fullPath')
@@ -15,6 +16,15 @@ section
 
 <script>
 export default {
+  data: () => ({
+    items: [
+      { icon: '', title: 'Početna', to: '/dashboard' },
+      { icon: 'date_range', title: 'Planiranje', to: '/dashboard/planiranje' },
+      { icon: 'description', title: 'Obrasci', to: '/dashboard/obrasci' },
+      { icon: '', title: 'Settings', to: '/dashboard/settings' },
+      { icon: '', title: 'Database Example', to: '/dashboard/items' },
+    ]
+  })
 }
 </script>
 
@@ -31,5 +41,16 @@ export default {
 }
 #adminChild {
   margin-top: 1em;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .4s, transform .4s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.page-enter, .page-leave-active {
+  opacity: 0.5;
+  transform: rotateY(100deg);
 }
 </style>

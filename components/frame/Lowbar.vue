@@ -1,11 +1,11 @@
 <template lang="pug">
 #lowbar
-  v-footer.pa3(app)
-    v-layout(justify-center, align-center)
-      v-spacer
-      span &copy; 2018&nbsp;
-      small
-        a(href='http://vidakovic.info' target="_blank") vidakovic.info
+  small
+    v-footer.pa3(app)
+      v-layout(justify-center, align-center)
+        span &copy; 2018&nbsp;
+        small
+          a(href='http://vidakovic.info' target="_blank") vidakovic.info
 
 </template>
 
