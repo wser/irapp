@@ -23,20 +23,12 @@ const createStore = () => {
       autoSignIn ({commit}, payload) {
         commit('setUser', payload)
       },
-
-      signInWithGoogle ({commit}) {
-        return new Promise((resolve, reject) => {
-          auth.signInWithRedirect(GoogleProvider)
-          resolve()
-        })
-      },
       signInWithEmailAndPassword ({commit}, creds) {
         return new Promise((resolve, reject) => {
           auth.signInWithEmailAndPassword(creds.email, creds.password)
           resolve()
         })
       },
-
       signOut ({commit}) {
         auth.signOut().then(() => {
           commit('setUser', null)

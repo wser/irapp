@@ -1,9 +1,12 @@
 <template lang="pug">
 section
-  h1.title
-    | {{pkg.name}}
-  h2.subtitle
-    | Best tool one auditor can use
+  .landing
+    h1.title
+      | {{pkg.name}}
+    h2.subtitle
+      | Best tool an auditor can use
+    br
+  v-divider
   v-layout
     v-flex(xs12='' md8='' offset-md2='')
       .wrapper
@@ -41,6 +44,13 @@ section
 </script>
 
 <style scoped>
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 .flexWrapper {
   display: flex;

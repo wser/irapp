@@ -43,7 +43,7 @@ export default {
 
 
 
-    currentItem: 'tab-Početna',
+    currentItem: 'tab-0',
     items: [
       'Web', 'Shopping', 'Videos', 'Images'
     ],
