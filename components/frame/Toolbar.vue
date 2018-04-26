@@ -66,10 +66,13 @@ export default {
 			return this.showNav = !this.showNav
     },
     logout () {
-      this.$store.dispatch('signOut').then(() => {
-        alert('logged out!')
-        this.$router.push('/')
-      })
+      this.$store.dispatch('signOut')
+        .then(() => {          
+          alert('logged out!')          
+        })
+        .then(() => {
+          this.$router.push('/')
+        })
     }
 	},
   destroyed () {

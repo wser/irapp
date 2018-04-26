@@ -4,7 +4,7 @@ const routerPrefix = process.env.DEPLOY_ENV === 'GH_PAGES'
 
 export default function ({ store, redirect, route }) {
   store.state.user != null && route.name == 'login' ? redirect(routerPrefix+'/dashboard') : ''
-  store.state.user == null && isAdminRoute(route) ? redirect(routerPrefix+'/login') : ''
+  store.state.user == null && isAdminRoute(route) ? redirect(routerPrefix+'/') : ''
 }
 
 function isAdminRoute(route) {

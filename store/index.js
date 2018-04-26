@@ -5,6 +5,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       user: null,
+      allowed:false,
       drawer: false,
       drawerRight: false,
       page:'',
@@ -17,9 +18,19 @@ const createStore = () => {
     mutations: {
       setUser (state, payload) {
         state.user = payload
+      },
+      setAllowedOn (state) {
+        state.allowed = true;
+      },
+      setAllowedOff (state) {
+        state.allowed = false;
       }
     },
     actions: {
+      appInit({ commit }) {
+        commit('setAllowedOn');
+      },
+
       autoSignIn ({commit}, payload) {
         commit('setUser', payload)
       },
@@ -32,7 +43,10 @@ const createStore = () => {
       signOut ({commit}) {
         auth.signOut().then(() => {
           commit('setUser', null)
-        }).catch(err => console.log(error))
+        }).then(()=>{
+          commit('setAllowedOff')
+        })
+        .catch(err => console.log(error))
       }
     }
   })

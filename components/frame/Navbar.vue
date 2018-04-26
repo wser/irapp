@@ -3,7 +3,7 @@
   v-navigation-drawer(temporary, absolute, app, 
    v-model='$store.state.drawer')
     v-list
-      v-list-tile(router, nuxt, exact, 
+      v-list-tile(router, nuxt, exact, v-if="item.allowed"
        v-for='(item, i) in items' :key='i' :to='item.to',
        @click.native.stop='setDrawer')
         v-list-tile-action
@@ -19,18 +19,25 @@ import Lowbar from './Lowbar'
 export default {
   components: {Lowbar},
   data() {
-    return {      
+    return {
       items: [
-        { icon: 'home', title: 'Welcome', to: '/' },
-        { icon: 'dashboard', title: 'Dashboard', to: '/dashboard' },
-        // { icon: 'store', title: 'FireStore', to: '/firestore' }
-      ],
+        this.item ('home', 'Welcome', '/', true),
+        this.item ('dashboard', 'Dashboard', '/dashboard', this.userState),
+      ]    
     }
-	},  
-  methods: {
+  },
+  computed: {
+    userState: () => {
+      return this.$store.state.allowed
+    },
+  },
+  methods: {    
     setDrawer(){
       this.$store.state.drawer = !this.$store.state.drawer 
     },
+    item (icon, title, to, allowed) {
+      return { icon, title, to, allowed }
+    }
   }
 }
 </script>
