@@ -19,34 +19,33 @@ const createStore = () => {
       setUser (state, payload) {
         state.user = payload
       },
-      setAllowedOn (state) {
-        state.allowed = true;
-      },
-      setAllowedOff (state) {
-        state.allowed = false;
+      setAllow(state, payload){
+        state.allowed = payload
       }
     },
     actions: {
-      appInit({ commit }) {
-        commit('setAllowedOn');
-      },
-
       autoSignIn ({commit}, payload) {
         commit('setUser', payload)
+        commit('setAllow', true)
       },
       signInWithEmailAndPassword ({commit}, creds) {
         return new Promise((resolve, reject) => {
           auth.signInWithEmailAndPassword(creds.email, creds.password)
           resolve()
         })
+        .then(()=>{
+          commit('setAllow', true)
+        })
       },
       signOut ({commit}) {
-        auth.signOut().then(() => {
+        auth.signOut()
+        .then(() => {
           commit('setUser', null)
-        }).then(()=>{
-          commit('setAllowedOff')
         })
-        .catch(err => console.log(error))
+        .then(()=>{
+          commit('setAllow', false)
+        })
+        .catch(err => console.log(err))
       }
     }
   })

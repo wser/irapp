@@ -56,6 +56,7 @@ export default {
     setDrawer(){
       this.$store.state.drawer = !this.$store.state.drawer 
     },
+
     setDrawerRight(){
       this.$store.state.drawerRight = !this.$store.state.drawerRight 
     },
@@ -68,9 +69,10 @@ export default {
     logout () {
       this.$store.dispatch('signOut')
         .then(() => {          
-          alert('logged out!')          
+          alert('logged out!')      
         })
         .then(() => {
+          // window.location.reload(true)
           this.$router.push('/')
         })
     }

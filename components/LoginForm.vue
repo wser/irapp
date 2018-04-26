@@ -66,18 +66,14 @@ export default {
   /*   clear () {
       this.$refs.form.reset()
     }, */
-    setAllowed(){
-      this.$store.dispatch('appInit');
-    },
+
     emailLogin () {
       this.$store.dispatch('signInWithEmailAndPassword', {
         email: this.formEmail,
         password: this.formPassword
-      }).then(() => {
-        this.setAllowed()
-      }).then(() => {
-         // this.$router.go({path:'/', force: true})
-        //this.$router.push('/')
+      })
+      .then(() => {
+        this.$router.push('/')
       }) .catch((e) => {
         console.log(e.message);
       })         
